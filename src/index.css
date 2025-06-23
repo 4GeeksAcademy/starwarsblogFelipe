@@ -1,0 +1,97 @@
+body {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  font-family: 'Star Jedi', sans-serif;
+  color: #ffe81f;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Fondo animado de estrellas */
+.stars {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out alternate;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.1; transform: scale(0.8); }
+  100% { opacity: 0.9; transform: scale(1.2); }
+}
+
+/* Tarjetas con estilo Star Wars */
+.starwars-card {
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffe81f;
+  border: 1px solid #ffe81f;
+  backdrop-filter: blur(4px);
+}
+
+/* Botones */
+.btn-primary {
+  background-color: #ffe81f ;
+  border: none;
+  color: #000 ;
+}
+.btn-primary:hover {
+  background-color: #fff100 ;
+}
+.btn-warning,
+.btn-info {
+  border: none;
+}
+.btn-danger {
+  background-color: #c0392b ;
+  border: none;
+}
+
+/* List group items */
+.list-group-item {
+  background-color: #111 ;
+  color: #ffe81f ;
+  border: 1px solid #222;
+}
+
+/* Modal flotante personalizado para notificaciones */
+.custom-modal {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  font-weight: bold;
+  padding: 0.7em 1.2em;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #ffe81f;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-50%) scale(0.95); }
+  to { opacity: 1; transform: translateX(-50%) scale(1); }
+}
+
+/* Transiciones suaves para cambios de página */
+.fade-enter {
+  opacity: 0;
+  transform: scale(0.95);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
