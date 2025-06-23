@@ -19,10 +19,7 @@ body {
   z-index: 0;
 }
 
-@keyframes twinkle {
-  0% { opacity: 0.1; transform: scale(0.8); }
-  100% { opacity: 0.9; transform: scale(1.2); }
-}
+
 
 /* Tarjetas con estilo Star Wars */
 .starwars-card {
@@ -32,23 +29,6 @@ body {
   backdrop-filter: blur(4px);
 }
 
-/* Botones */
-.btn-primary {
-  background-color: #ffe81f ;
-  border: none;
-  color: #000 ;
-}
-.btn-primary:hover {
-  background-color: #fff100 ;
-}
-.btn-warning,
-.btn-info {
-  border: none;
-}
-.btn-danger {
-  background-color: #c0392b ;
-  border: none;
-}
 
 /* List group items */
 .list-group-item {
@@ -73,25 +53,4 @@ body {
   animation: fadeIn 0.3s ease-out;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateX(-50%) scale(0.95); }
-  to { opacity: 1; transform: translateX(-50%) scale(1); }
-}
 
-/* Transiciones suaves para cambios de página */
-.fade-enter {
-  opacity: 0;
-  transform: scale(0.95);
-}
-.fade-enter-active {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 300ms, transform 300ms;
-}
-.fade-exit {
-  opacity: 1;
-}
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 200ms;
-}
